@@ -8,11 +8,11 @@
 //配置apache
 //用编辑器打开apache24/conf/httpd.conf进行如下修改
 //DocumentRoot "c:/Apache24/htdocs"修改为DocumentRoot "D:\Apache24"
-//<Directory "c:/Apache24/htdocs">修改为<Directory "D:\Apache24">
-//ServerRoot "c:/Apache24"修改为ServerRoot "D:\Apache24"
+//<Directory "c:/Apache24/htdocs">修改为<Directory "E:\localhost\www">
+//ServerRoot "c:/Apache24"修改为ServerRoot "E:\localhost\www"
 //DirectoryIndex index.html后面增加index.php index.xml index.htm并且将index.php 置于最前DirectoryIndex index.php index.html index.htm index.xml
 //在#LoadModule vhost_alias_module modules/mod_vhost_alias.so下面加上如下语句
-//LoadModule php7_module "D:/php/php7apache2_4.dll"(双引号里加上你php中phpapache的解压位置，我的这个文件名称是php7apache2_4.dll)
+//LoadModule php7_module "D:/php/php7apache2_4.dll"(双引号里加上你php中phpapache的解压位置，不同版本名称不同，我的这个文件名称是php7apache2_4.dll)
 //PHPIniDir "d:/php"(括号里是你php的解压位置)
 //AddType application/x-httpd-php .php .html .htm
 
@@ -25,7 +25,7 @@
 //将; extension_dir = "ext"修改为extension_dir = "D:\php\ext"注意，语句前的分号要去掉，这是指定php的扩展包位置，就是你php根目录中的ext文件夹位置
 //在使用session功能时，我们必须配置session文件在服务器上的保存目录，否则无法使用session，
 //我们需要在Windows上新建一个可读写的目录文件夹，此目录最好独立于WEB主程序目录之外，
-//此处我在E:\localhost目录上建立了phpsessiontmp目录，然后在 php.ini配置文件中添加一条语句session.save_path = "E:\localhost\phpsessiontmp"
+//此处我在E:\localhost目录上建立了phpsessiontmp目录，然后在 php.ini配置文件中修改一条语句;session.save_path = "/tmp"为session.save_path = "E:\localhost\phpsessiontmp"
 //将php.ini中如下语句前的分号去掉
 //;extension=php_curl.dll
 //;extension=php_gd2.dll
