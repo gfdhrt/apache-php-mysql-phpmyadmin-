@@ -7,9 +7,9 @@
 //将下载下来的httpd-2.4.23-win64-VC14.zip中的Apache24根据需要自行选择解压位置，具体数字都是根据你下的不同版本而改变。
 //配置apache
 //用编辑器打开apache24/conf/httpd.conf进行如下修改
-//DocumentRoot "c:/Apache24/htdocs"修改为DocumentRoot "D:\Apache24"
-//<Directory "c:/Apache24/htdocs">修改为<Directory "E:\localhost\www">
-//ServerRoot "c:/Apache24"修改为ServerRoot "E:\localhost\www"
+//DocumentRoot "c:/Apache24/htdocs"修改为DocumentRoot "D:/Apache24/htdocs"
+//<Directory "c:/Apache24/htdocs">修改为<Directory "D:/Apache24/htdocs">
+//ServerRoot "c:/Apache24"修改为ServerRoot "D:/Apache24"
 //DirectoryIndex index.html后面增加index.php index.xml index.htm并且将index.php 置于最前DirectoryIndex index.php index.html index.htm index.xml
 //在#LoadModule vhost_alias_module modules/mod_vhost_alias.so下面加上如下语句
 //LoadModule php7_module "D:/php/php7apache2_4.dll"(双引号里加上你php中phpapache的解压位置，不同版本名称不同，我的这个文件名称是php7apache2_4.dll)
